@@ -17,8 +17,8 @@ const SEARCH_URL =
 	getPreferenceValues<Preferences>().customSearchUrl || DEFAULT_SEARCH_URL;
 
 const SEARCH_TYPES = {
-	default: (query: string) => `${SEARCH_URL}&q=${encodeURIComponent(query)}`,
-	pipe: (query: string) => `${SEARCH_URL}&q=|${encodeURIComponent(query)}`,
+	default: (query: string) => `${SEARCH_URL}&q=${query}`,
+	pipe: (query: string) => `${SEARCH_URL}&q=|${query}`,
 };
 
 export default function Command() {
